@@ -1,6 +1,9 @@
 
 # Building a MEAN Stack application 
 Reference: https://medium.com/@onejohi/mean-stack-quick-guide-f50351ba56eb
+Getting Started Angular: https://medium.com/@onejohi/getting-started-with-angular-5-5099104eb2f
+Angular 6 Cheat Sheet: https://medium.com/@onejohi/angular-6-cheat-sheet-b36e04bf008a
+
 
 # Terms from tutorial
 * REPL - Node JS provies a REPL environment, Read Eval print loop
@@ -14,6 +17,10 @@ Reference: https://medium.com/@onejohi/mean-stack-quick-guide-f50351ba56eb
     ``` 
 * Create Angular Application
     ``` Powershell
-    ng new mean-learnApp-tutorial // this will create a application folder and a src folder.
+    ng new mean-learnApp-tutorial // this will create a application folder and a src folder. Run from github folder.
     ```
 
+# Install Express
+    ``` Powershell
+    npm install -g express-generator
+    ```
