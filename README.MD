@@ -25,16 +25,20 @@
         at SendStream.emit (events.js:189:13)
     ```
 
-    https://expressjs.com/en/starter/static-files.html
-    https://appdividend.com/2018/11/24/how-to-serve-static-files-in-express/
+    * https://expressjs.com/en/starter/static-files.html
+    * https://appdividend.com/2018/11/24/how-to-serve-static-files-in-express/
 
 
 ## Terms from tutorial
 * REPL - Node JS provies a REPL environment, Read Eval print loop
 * MEAN - MongDb, Express, Angular, Node
 * BJSON - BSON is a computer data interchange format used mainly as a data storage and network transfer format in the MongoDB database. It is a binary form for representing simple data structures, associative arrays, and various data types of specific interest to MongoDB https://en.wikipedia.org/wiki/BSON .
+* BSON - is a computer data interchange format used mainly as a data storage and network transfer format in the MongoDB database. It is a binary form for representing simple data structures, associative arrays, and various data types of specific interest to MongoDB.
+* CORS - Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.[1] A web page may freely embed cross-origin images, stylesheets, scripts, iframes, and videos.[2] Certain "cross-domain" requests, notably Ajax requests, are forbidden by default by the same-origin security policy.
 
-
+CORS defines a way in which a browser and server can interact to determine whether or not it is safe to allow the cross-origin request.[3] It allows for more freedom and functionality than purely same-origin requests, but is more secure than simply allowing all cross-origin requests. The specification for CORS was originally published as a W3C Recommendation[4] but that document is obsolete.[5] The current actively-maintained specification that defines CORS is WHATWG's Fetch Living Standard.[6]
+[CORS Reference wikipedia](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+[NPM CORS usage](https://www.npmjs.com/package/cors)
 ## Commands to create and run application
 ### Create a git repository Reference: https://github.com/CODevOp/express-rest-API
 * Install Angular CLI
@@ -78,8 +82,32 @@ The app.js file is not automaticall created. and setup the express server
 
     1. create a folder "public" in root
     2. navigate to  http://127.0.0.1:3000/index.html
-    
+## Commands continued.... MongoDB
+    ``` Powershell
+    # install mongoose to interact with a mongoDB from NodeJS
+    npm install mongoose body-parser --save
+    # install CORS to secure Cross origin requests https://www.npmjs.com/package/cors
+    npm install cors
+    ```
+### Note on MongoDb
+    I am not running the mongoDb locally. Instead I am using what I learned in [express-locallibrary-tutorial](https://github.com/CODevOp/express-locallibrary-tutorial).
+    In the [MDN Express Tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs) a mongoDb was used from the [Atlas Cloud](https://www.mongodb.com/cloud/atlas). MongoDB has set up their cloud to use free tier pricing from Azure, AWS and Google and pass this on to the community, allowing developers to learn document databases and MongoDB. To protect my connection strings I store them in local variables. 
+
+### Set local variables to protect passwords
+    [Reference about Environment:](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-6)
+    ``` Powershell
+    # to read or query local variables
+    Set-Location Env:
+    c
+
+    # or   
+    Get-ChildItem Env:
+    $ENV:dev_db_url = "mongodb+srv://<user>:<password>@<cluster>.azure.mongodb.net/<database>?retryWrites=true"
+    ```
+
+
 ### Next steps
 * MongoDb
+    * Add form to add students
 * Review other articles/reference from tutorial
 
