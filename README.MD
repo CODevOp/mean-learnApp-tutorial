@@ -40,7 +40,7 @@ CORS defines a way in which a browser and server can interact to determine wheth
 [CORS Reference wikipedia](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 [NPM CORS usage](https://www.npmjs.com/package/cors)
 ## Commands to create and run application
-### Create a git repository Reference: https://github.com/CODevOp/express-rest-API
+* Create a git repository Reference: https://github.com/CODevOp/express-rest-API
 * Install Angular CLI
     ``` Powershell
     npm install -g @angular/cli
@@ -49,17 +49,17 @@ CORS defines a way in which a browser and server can interact to determine wheth
     ``` Powershell
     ng new mean-learnApp-tutorial # this will create a application folder and a src folder. Run from github folder.
     ```
-### Install Express
+* Install Express
     ``` Powershell
     npm install -g express-generator    
     ```
-### Add Express to the Angular Project
+* Add Express to the Angular Project
     ``` Powershell
     # this will add express to package.json file and installs express packages in node_modules
     npm install express --save 
     ```
-### Add app.js file 
-The app.js file is not automaticall created. and setup the express server
+* Add app.js file 
+    The app.js file is not automatically created
     ``` Javascript
     let express = require('express')
     let path = require('path')
@@ -72,30 +72,32 @@ The app.js file is not automaticall created. and setup the express server
     })
     ```
 
-### To run express service
+* To run express service
     ``` Powershell
     node app.js
     ```
 
     1. create a folder "public" in root
     2. navigate to  http://127.0.0.1:3000/index.html
-## Commands continued.... MongoDB
+## Commands continued.... 
+* MongoDB
     ``` Powershell
     # install mongoose to interact with a mongoDB from NodeJS
     npm install mongoose body-parser --save
     # install CORS to secure Cross origin requests https://www.npmjs.com/package/cors
     npm install cors
     ```
-### Note on MongoDb
+* Note on MongoDb
+
     I am not running the mongoDb locally. Instead I am using what I learned in [express-locallibrary-tutorial](https://github.com/CODevOp/express-locallibrary-tutorial).
     In the [MDN Express Tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs) a mongoDb was used from the [Atlas Cloud](https://www.mongodb.com/cloud/atlas). MongoDB has set up their cloud to use free tier pricing from Azure, AWS and Google and pass this on to the community, allowing developers to learn document databases and MongoDB. To protect my connection strings I store them in local variables. 
 
-### Set local variables to protect passwords
+* Set local variables to protect passwords
     [Reference about Environment:](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-6)
     ``` Powershell
     # to read or query local variables
     Set-Location Env:
-    c
+    Get-ChildItem
 
     # or   
     Get-ChildItem Env:
