@@ -44,16 +44,14 @@ CORS defines a way in which a browser and server can interact to determine wheth
 * Install Angular CLI
     ``` Powershell
     npm install -g @angular/cli
-    ``` 
+    ```
 * Create Angular Application
     ``` Powershell
-    ng new mean-learnApp-tutorial // this will create a application folder and a src folder. Run from github folder.
+    ng new mean-learnApp-tutorial # this will create a application folder and a src folder. Run from github folder.
     ```
-
 ### Install Express
     ``` Powershell
-    npm install -g express-generator
-    
+    npm install -g express-generator    
     ```
 ### Add Express to the Angular Project
     ``` Powershell
@@ -72,7 +70,6 @@ The app.js file is not automaticall created. and setup the express server
     app.listen(3000 || process.env.PORT, () => {
     console.log("Server listening on port 3000")
     })
-
     ```
 
 ### To run express service
